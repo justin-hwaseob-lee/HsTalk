@@ -1,0 +1,180 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:background="@drawable/login_background"
+    android:gravity="center"
+    android:layout_width="fill_parent">
+
+
+
+    <ImageView
+        android:layout_width="136dp"
+        android:layout_height="138dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/logo_typo"
+        android:id="@+id/imageView2"
+        />
+
+    <ImageView
+        android:layout_width="230dp"
+        android:layout_height="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/signin_line"
+        android:layout_gravity="center_horizontal" />
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="230dp"
+        android:layout_height="40dp">
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:background="@drawable/form" />
+
+        <ImageView
+            android:id="@+id/nicknameicon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignStart="@+id/back"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/username_icon" />
+
+        <EditText
+            android:id="@+id/etNickName"
+            android:layout_width="190dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/nicknameicon"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:hint="USERNAME"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="@color/abc_primary_text_material_dark" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp">
+
+
+        <ImageView
+            android:id="@+id/back2"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:background="@drawable/form" />
+
+        <ImageView
+            android:id="@+id/passwordicon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignStart="@+id/back2"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/pw_icon" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="190dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/passwordicon"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:hint="PASSWORD"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="@color/abc_primary_text_material_dark" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp">
+
+
+        <ImageView
+            android:id="@+id/back1"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:background="@drawable/form" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+          <RadioGroup
+              android:id="@+id/etSex"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:weightSum="1">
+
+              <RadioButton
+                  android:buttonTint="#ffffff"
+                  android:layout_marginTop="2dp"
+                  android:layout_marginLeft="2dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="남자"
+                  android:textColor="#ffffff"
+                  android:checked="true"
+                  android:id="@+id/etMan" />
+              <RadioButton
+                  android:buttonTint="#ffffff"
+                  android:layout_marginLeft="40dp"
+                  android:layout_marginTop="2dp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="여자"
+                  android:textColor="#ffffff"
+                  android:id="@+id/etWoman"
+                  android:layout_weight="0.56" />
+
+
+          </RadioGroup>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+    <!-- Login Button -->
+
+
+
+    <Button
+        android:id="@+id/bRegister"
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/signin_btn_push"  />
+
+
+
+
+    <!-- Link to Login Screen -->
+
+
+</LinearLayout>

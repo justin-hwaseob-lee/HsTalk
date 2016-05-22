@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/chat_talk_visitor"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:longClickable="false"
+    >
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:longClickable="false">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/userPic"
+            android:src="@drawable/profile"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#747474"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/userName"
+            android:layout_alignTop="@+id/userPic"
+            android:layout_toRightOf="@+id/userPic"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:textSize="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/talkTime"
+            android:textColor="#747474"
+            android:layout_above="@+id/talkContent"
+            android:layout_alignLeft="@+id/talkContent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/talkContent"
+            android:padding="5dp"
+            android:background="@drawable/chat_item_background_round_e5a032"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/userName"
+            android:layout_toRightOf="@+id/userPic"
+            android:layout_marginLeft="5dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="onClickReply"
+            android:layout_below="@+id/talkContent"
+            android:layout_alignLeft="@+id/talkContent"
+            android:id="@+id/relativeLayout6"
+            android:visibility="gone">
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/chat_talk_not_visitor"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:longClickable="false">
+
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:longClickable="false">
+    <ImageView
+        android:layout_width="0.1dp"
+        android:layout_height="10dp"
+        android:id="@+id/userPic"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:textSize="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/talkTime"
+        android:textColor="#747474"
+        android:layout_above="@+id/talkContent"
+        android:layout_alignRight="@+id/talkContent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="New Text"
+        android:id="@+id/talkContent"
+        android:layout_below="@+id/userPic"
+        android:textColor="#ffffff"
+        android:layout_toLeftOf="@+id/userPic"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/chat_item_background_round_ffb744"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="onClickReply"
+        android:layout_below="@+id/talkContent"
+        android:layout_alignLeft="@+id/talkContent"
+        android:id="@+id/relativeLayout5"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="20dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/imageReply"
+            android:layout_alignTop="@+id/textReply"
+            android:layout_alignBottom="@+id/textReply"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="댓글보기"
+            android:id="@+id/textReply"
+            android:layout_toRightOf="@+id/imageReply"
+            android:layout_marginTop="3dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="3dp"
+            android:textSize="9dp"/>
+    </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

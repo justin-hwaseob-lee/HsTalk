@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="136dp"
+        android:layout_height="118dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/logo_typo"
+        android:layout_weight="0.07" />
+
+    <ImageView
+        android:layout_width="230dp"
+        android:layout_height="15dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/login" />
+
+    <RelativeLayout
+        android:layout_width="230dp"
+        android:layout_height="40dp">
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:background="@drawable/form" />
+
+        <ImageView
+            android:id="@+id/nicknameicon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignStart="@+id/back"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/username_icon" />
+
+        <EditText
+            android:id="@+id/etNickName"
+            android:layout_width="190dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/nicknameicon"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:hint="USERNAME"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="@color/abc_primary_text_material_dark" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="230dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp">
+
+
+        <ImageView
+            android:id="@+id/back2"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:background="@drawable/form" />
+
+        <ImageView
+            android:id="@+id/passwordicon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignStart="@+id/back2"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/pw_icon" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="190dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/passwordicon"
+            android:background="@null"
+            android:cursorVisible="false"
+            android:hint="PASSWORD"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="@color/abc_primary_text_material_dark" />
+
+
+    </RelativeLayout>
+
+
+    <!-- Login Button -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@null">
+
+        <Button
+            android:id="@+id/bLogin"
+            android:layout_width="113dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/login_btn" />
+
+        <Button
+            android:id="@+id/tvRegisterLink"
+            android:layout_width="113dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/signin_btn_small" />
+
+
+    </LinearLayout>
+
+    <!-- Link to Login Screen -->
+
+
+</LinearLayout>

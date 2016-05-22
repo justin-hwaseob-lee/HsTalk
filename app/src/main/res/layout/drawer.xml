@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+<!-- 드로어 -->
+<RelativeLayout
+    android:id="@+id/drawer"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@drawable/side_top_bar"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/drawer_closeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@null"
+        android:src="@drawable/abc_ic_clear_mtrl_alpha" />
+
+    <ImageView
+        android:id="@+id/drawerImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/default_man" />
+
+    <TextView
+        android:id="@+id/drawerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/drawerImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="환영합니다!"
+
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/drawerText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/drawerText"
+        android:layout_centerHorizontal="true"
+        android:text="로그인 하세요."
+        android:textColor="@color/abc_primary_text_disable_only_material_dark"
+        android:textStyle="bold" />
+
+    <com.devsmart.android.ui.HorizontalListView
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/drawerText2"
+        android:layout_gravity="start"
+        android:layout_marginBottom="34dp"
+        android:layout_marginTop="40dp"
+        android:background="#ffffff" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/bar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="33dp"
+            android:src="@drawable/bar" />
+
+        <ImageButton
+            android:id="@+id/drawer_loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="54dp"
+            android:background="@null"
+            android:clickable="true"
+            android:onClick="loginListener"
+            android:src="@drawable/logout_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="loginListener"
+            android:text="Log in"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            android:id="@+id/drawer_loginText"
+            android:layout_marginStart="23dp"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/drawer_loginBtn" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+</merge>

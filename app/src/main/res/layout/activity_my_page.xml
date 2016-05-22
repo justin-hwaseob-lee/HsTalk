@@ -1,0 +1,215 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 콘테이너 -->
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mypage_Container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 커스텀 툴바 상단 include-->
+        <include
+            layout="@layout/custom_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+
+
+        <RelativeLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/etProfilePic"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="55dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal|top"
+                android:src="@drawable/default_man" />
+            <!-- 기본적으로 안보이게 설정해놓는다. -->
+            <ProgressBar
+                android:id="@+id/progresscircle"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="55dp"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:id="@+id/mypage_ProfileEditBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/mypage_UserName_Text"
+                android:layout_alignEnd="@+id/etProfilePic"
+                android:background="@null"
+                android:src="@drawable/photo_edit_btn" />
+
+            <ImageView
+                android:id="@+id/barber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mypage_UserName_Text"
+                android:src="@drawable/bar" />
+
+            <ImageView
+                android:id="@+id/bar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mypage_Password_Text"
+                android:src="@drawable/bar" />
+
+            <ImageView
+                android:id="@+id/bar3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bar"
+                android:layout_alignBottom="@+id/etSex2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/mypage_UserName_Text"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_alignEnd="@+id/etProfilePic"
+                android:layout_below="@+id/etProfilePic"
+                android:layout_gravity="center"
+                android:layout_marginEnd="45dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center|start"
+                android:text="USER NAME"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/button_material_dark"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/mypage_Password_Text"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/mypage_UserName_Text"
+                android:layout_below="@+id/mypage_UserName_Text"
+                android:gravity="center|start"
+                android:text="PASSWORD"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/button_material_dark"
+                android:textSize="15sp" />
+
+
+            <!--user name-->
+            <EditText
+                android:id="@+id/etNickName"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_alignTop="@+id/mypage_UserName_Text"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@+id/mypage_Password_Text"
+                android:autoLink="none"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:singleLine="true"
+                android:textColor="@color/button_material_dark"
+                android:textSize="15sp" />
+
+            <!--password-->
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_alignEnd="@+id/etNickName"
+                android:layout_below="@+id/mypage_UserName_Text"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/button_material_dark"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/etSex2"
+                android:layout_width="30dp"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/button_material_dark"
+                android:textSize="15sp"
+                android:layout_below="@+id/mypage_Password_Text"
+                android:layout_toLeftOf="@+id/mypage_Password_Text"
+                android:layout_toStartOf="@+id/mypage_Password_Text" />
+
+
+            <ImageButton
+                android:id="@+id/bEditUserInfo"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="37dp"
+                android:background="@null"
+                android:src="@drawable/edit_btn"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/bar2"
+                android:layout_alignBottom="@+id/etSex2"
+                android:id="@+id/linearLayout2"
+                android:weightSum="1"
+                android:layout_alignLeft="@+id/etSex2"
+                android:layout_alignStart="@+id/etSex2"
+                android:layout_alignRight="@+id/etPassword"
+                android:layout_alignEnd="@+id/etPassword">
+
+                <RadioGroup
+                    android:id="@+id/etSex"
+                    android:orientation="horizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.61">
+
+                    <RadioButton
+                        android:layout_marginLeft="22dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="남자(Man)"
+                        android:id="@+id/etMan" />
+                    <RadioButton
+                        android:layout_width="152dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_height="wrap_content"
+                        android:text="여자(Woman)"
+                        android:id="@+id/etWoman" />
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <!--네비게이터 드로어 include-->
+    <include
+        layout="@layout/drawer"
+        android:layout_width="280dp"
+        android:layout_height="match_parent" />
+
+</android.support.v4.widget.DrawerLayout>

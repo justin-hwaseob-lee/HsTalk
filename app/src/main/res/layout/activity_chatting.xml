@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Tab$PlaceholderFragment">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/chatting_Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 커스텀 툴바 상단 include-->
+        <include
+            layout="@layout/chatting_custom_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+    </FrameLayout>
+    <!--  focusalbeinTouchMode true를 리니어에 달아서 edittext에 포커싱되서 키패드띄는거 처리함-->
+    <RelativeLayout
+        android:layout_below="@+id/chatting_Container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp">
+
+        <ListView
+            android:id="@+id/listview_chatting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:longClickable="true"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_above="@+id/relativeLayout3"
+            android:layout_alignLeft="@+id/relativeLayout3"
+            android:layout_alignRight="@+id/relativeLayout3"
+            android:background="#73D9CB" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <!-- 채팅창에서 사진추가-->
+            <ImageButton
+                android:id="@+id/buttonAddPicture"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:onClick="onClickFindPicture"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_camera"
+                android:layout_marginRight="5dp" />
+            <!-- 채팅창에서 채팅내용적는칸-->
+            <EditText
+                android:id="@+id/editText_chat"
+                android:textSize="19dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_alignBottom="@+id/buttonAddPicture"
+                android:layout_alignParentBottom="false"
+                android:layout_toLeftOf="@+id/buttonSend"
+                android:layout_toRightOf="@+id/buttonAddPicture"
+                android:textCursorDrawable="@null"
+                android:singleLine="true" />
+            <!-- 채팅창에서 채팅보내기-->
+            <ImageButton
+                android:id="@+id/buttonSend"
+                style="?android:attr/buttonStyleSmall"
+
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="false"
+                android:background="@null"
+                android:onClick="onClickSend"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_sendchatting"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp" />
+        </RelativeLayout>
+
+
+        <!-- 채팅에서 이미지 추가시 체크표시-->
+        <ImageView
+            android:id="@+id/imageView_check"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignLeft="@+id/relativeLayout3"
+            android:layout_alignTop="@+id/relativeLayout3"
+            android:layout_marginLeft="17dp"
+            android:background="@null"
+            android:src="@drawable/ic_check"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</RelativeLayout>

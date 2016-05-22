@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:id="@+id/chat_pic_visitor"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:longClickable="true"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton3"
+        android:layout_alignTop="@+id/upperyo"
+        android:layout_alignLeft="@+id/spaceLeft"
+        android:layout_alignRight="@+id/spaceRight"
+        android:layout_alignBottom="@+id/spaceBottom"
+        android:background="@drawable/chat_item_background_round_e5a032"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/userPic"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+
+    <ImageView
+        android:id="@+id/upperyo"
+        android:layout_marginTop="2dp"
+        android:layout_width="180dp"
+        android:layout_height="10dp"
+        android:layout_below="@+id/talkTime"
+        android:layout_alignLeft="@+id/imageButton3"
+        android:layout_alignStart="@+id/imageButton3" />
+
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/progressBar_loadingPicture"
+        android:layout_alignLeft="@+id/talkPic"
+        android:layout_alignTop="@+id/talkPic"
+        android:layout_alignBottom="@+id/talkPic"
+        android:layout_alignRight="@+id/talkPic"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="90dp"
+        android:indeterminate="false"
+        android:visibility="visible"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_below="@+id/talkContent"
+        android:layout_alignLeft="@+id/talkContent"
+        android:id="@+id/relativeLayout4"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="20dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/imageReply"
+            android:layout_alignTop="@+id/textReply"
+            android:layout_alignBottom="@+id/textReply" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="댓글보기"
+            android:id="@+id/textReply"
+            android:layout_toRightOf="@+id/imageReply"
+            android:layout_marginTop="3dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="3dp"
+            android:textSize="9dp"/>
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="7dp"
+        android:id="@+id/spaceBottom"
+        android:layout_below="@+id/relativeLayout4"
+        android:layout_alignRight="@+id/talkPic"
+        android:layout_alignLeft="@+id/talkPic"/>
+
+    <Space
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:id="@+id/spaceLeft"
+        android:layout_above="@+id/spaceBottom"
+        android:layout_toStartOf="@+id/spaceBottom"
+        android:layout_alignTop="@+id/talkPic"/>
+
+    <Space
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_alignTop="@+id/talkPic"
+        android:layout_alignBottom="@+id/talkPic"
+        android:layout_toRightOf="@+id/talkPic"
+        android:id="@+id/spaceRight"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/talkContent"
+        android:layout_alignLeft="@+id/talkPic"
+        android:layout_alignRight="@+id/talkPic"
+        android:layout_below="@+id/talkPic"
+        android:layout_marginTop="3dp"
+        android:textColor="@android:color/primary_text_dark_nodisable" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:textColor="#747474"
+        android:id="@+id/userName"
+        android:layout_alignTop="@+id/userPic"
+        android:layout_toRightOf="@+id/userPic"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:textSize="13dp"
+        android:layout_marginLeft="1dp"
+        android:textColor="#747474"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/talkTime"
+        android:layout_below="@+id/userName"
+        android:layout_alignLeft="@+id/imageButton3"
+        android:layout_alignStart="@+id/imageButton3" />
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="240dp"
+        android:id="@+id/talkPic"
+        android:layout_below="@+id/upperyo"
+        android:layout_toRightOf="@+id/userPic"
+        android:layout_marginLeft="10dp"/>
+
+
+
+
+
+</RelativeLayout>
